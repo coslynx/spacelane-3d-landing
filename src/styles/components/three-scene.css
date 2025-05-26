@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ThreeScene container */
+.three-scene-container {
+  @apply relative w-full h-full;
+}
+
+/* 3D canvas styling */
+canvas {
+  @apply absolute top-0 left-0 w-full h-full;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* High contrast mode adjustments */
+.high-contrast-mode {
+  color: black;
+  background-color: white;
+}
+
+/* GPU acceleration */
+.gpu-acceleration {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
