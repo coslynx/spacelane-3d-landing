@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #2C3E50;
+  --secondary-color: #FAFAFA;
+  --accent-color: #2ecc71;
+  --text-color: #333333;
+  --surface-color: #ffffff;
+  --animation-duration: 0.3s;
+  --animation-easing: ease-in-out;
+  --heading-font-size: 2rem;
+  --body-font-size: 1rem;
+  --ui-font-size: 0.875rem;
+  --mobile-breakpoint: 768px;
+  --tablet-breakpoint: 1024px;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  transition: background-color var(--animation-duration) var(--animation-easing),
+    color var(--animation-duration) var(--animation-easing);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: var(--heading-font-size);
+  transition: color var(--animation-duration) var(--animation-easing);
+}
+
+p {
+  font-size: var(--body-font-size);
+  line-height: 1.6;
+  transition: color var(--animation-duration) var(--animation-easing);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--ui-font-size);
+}
+
+ul,ol{
+  list-style: none;
+  padding: 0;
+}
+
+/* 3D Canvas Integration */
+canvas {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: var(--mobile-breakpoint)) {
+  :root {
+    --heading-font-size: 1.5rem;
+    --body-font-size: 0.875rem;
+  }
+}
+
+/* Accessibility Enhancements */
+:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Performance Optimization */
+.gpu-acceleration {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Utility classes */
+.scale-105 {
+    transform: scale(1.05);
+}
+
+/* Responsive scaling */
+.scale-sm {
+  transform: scale(0.8);
+}
+
+/* Transitions for different responsive classes and settings */
+.transition-custom {
+    transition: all 0.3s ease-in-out;
+}
