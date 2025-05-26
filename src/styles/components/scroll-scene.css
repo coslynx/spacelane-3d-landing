@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ScrollScene container */
+.scroll-scene-container {
+    @apply relative w-full h-screen;
+}
+
+/* 3D canvas styling */
+.scroll-scene-canvas {
+    @apply absolute top-0 left-0 w-full h-full;
+    z-index: 1;
+    will-change: transform;
+}
+
+/* Dark mode adjustments */
+.dark .scroll-scene-container {
+    /* Adjust dark mode styles here, if different from light mode */
+}
+
+/* GPU acceleration */
+.scroll-scene-gpu-acceleration {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
