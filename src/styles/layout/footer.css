@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer-container {
+  @apply bg-gray-100 dark:bg-gray-900 py-8 px-4 transition-colors duration-300;
+}
+
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+.footer-section {
+  @apply text-gray-600 dark:text-gray-300 text-sm transition-colors duration-300;
+}
+
+.social-links {
+  @apply flex justify-center space-x-4;
+}
+
+.social-link {
+  @apply text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300;
+}
+
+.social-link:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.legal-links {
+  @apply flex justify-end space-x-4;
+}
+
+.legal-link {
+  @apply text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100 text-sm transition-colors duration-300;
+}
+
+.legal-link:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.contact-info {
+  @apply mt-4 text-center;
+}
+
+.contact-item {
+  @apply text-gray-600 dark:text-gray-300 text-sm transition-colors duration-300;
+}
+
+.year {
+  @apply transition-colors duration-300;
+}
+
+.dark .footer-container {
+  @apply bg-gray-900;
+}
+
+.dark .footer-section {
+  @apply text-gray-300;
+}
+.high-contrast-mode .footer-container {
+  background-color: white;
+  color: black;
+}
+.high-contrast-mode .year {
+  color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-grid {
+    @apply grid-cols-1; /* Stack sections on smaller screens */
+  }
+
+  .social-links {
+    @apply justify-start; /* Align social links to the left on smaller screens */
+  }
+
+  .legal-links {
+    @apply justify-start; /* Align legal links to the left on smaller screens */
+  }
+}
