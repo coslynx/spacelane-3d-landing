@@ -1,0 +1,12 @@
+/* src/styles/layout/minimal-layout.css */
+
+/* Provides a basic, clean layout for presenting 3D content. */
+.minimal-layout-container {
+  @apply flex items-center justify-center h-screen w-screen; /* Centers content and covers the entire viewport */
+}
+
+/* Styles for elements in high contrast mode. */
+.high-contrast-mode {
+  color: black;
+  background-color: white;
+}
