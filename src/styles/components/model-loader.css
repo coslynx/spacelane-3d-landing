@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.model-loader-container {
+  @apply relative flex items-center justify-center h-64 w-full;
+}
+
+.loading-spinner {
+  @apply animate-spin inline-block w-8 h-8 border-[3px] rounded-full border-current;
+  border-right-color: transparent;
+  border-top-color: theme(colors.blue.500);
+  border-left-color: theme(colors.blue.500);
+  border-bottom-color: theme(colors.blue.500);
+  @apply dark:border-gray-700 dark:border-t-blue-500 dark:border-l-blue-500 dark:border-r-transparent dark:border-b-blue-500;
+}
+
+.loading-progress-bar {
+  @apply relative w-64 h-2 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.loading-progress-bar-fill {
+  @apply absolute top-0 left-0 h-full bg-blue-500 rounded-full transition-all duration-500;
+}
+
+.error-message {
+  @apply text-red-500 font-semibold mt-2 text-center;
+}
+
+.canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Opaque white background */
+  z-index: 2; /* Ensure it's above the canvas */
+}
