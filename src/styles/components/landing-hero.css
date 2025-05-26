@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-section{
+@apply relative w-full h-screen flex items-center justify-center overflow-hidden;
+}
+.hero-content{
+@apply container mx-auto px-4 relative z-10 text-center md:text-left;
+}
+.hero-headline{
+@apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-300;
+}
+.hero-description{
+@apply text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 transition-colors duration-300;
+}
+.hero-cta{
+@apply bg-teal-500 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300;
+}
+canvas{
+position:relative;
+z-index:1;
+will-change:transform
+}
+.gpu-acceleration{
+transform:translateZ(0);
+backface-visibility:hidden
+}
