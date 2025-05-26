@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.model-showcase-container {
+  @apply flex items-center justify-center h-screen w-screen;
+}
+
+.model-viewer {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  height: 60vh;
+  @apply md:w-1/2 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800;
+  will-change: transform;
+}
+
+.model-selector {
+  @apply mt-8 text-center;
+}
+
+.model-list {
+  @apply flex justify-center space-x-4 mt-2;
+}
+
+.model-item {
+  @apply px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200;
+}
+
+.model-button {
+  @apply text-gray-700 dark:text-gray-200 text-sm font-medium focus:outline-none;
+}
+
+/* 3D Canvas Integration */
+canvas {
+  position:relative;
+  z-index:1;
+  will-change:transform
+}
+.high-contrast-mode {
+  color: black;
+  background-color: white;
+}
+/* Accessibility Enhancements */
+:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Performance Optimization */
+.gpu-acceleration {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
