@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply relative z-50 flex items-center justify-between py-4 px-6 transition-all duration-300;
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header.dark.fixed {
+  background-color: #1f2937;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.header a {
+  @apply flex items-center;
+}
+
+.header img {
+  @apply h-8 w-auto;
+}
+
+.header nav {
+  @apply hidden md:flex space-x-4;
+}
+
+.header nav a {
+  @apply hover:text-gray-500 transition-colors duration-200;
+}
+
+.header .auth-buttons {
+  @apply flex items-center space-x-4;
+}
+
+.header .auth-buttons button {
+  @apply py-2 px-4 rounded font-semibold transition-colors duration-200 focus:outline-none;
+}
+
+.header .auth-buttons .login-button {
+  @apply bg-blue-500 hover:bg-blue-700 text-white;
+}
+
+.header .auth-buttons .logout-button {
+  @apply bg-red-500 hover:bg-red-700 text-white;
+}
+
+.header .search-button {
+  @apply text-gray-500 hover:text-gray-700 focus:outline-none transition-colors duration-200;
+}
+
+.header .search-input-container {
+  @apply absolute top-full mt-2 right-0 md:right-auto;
+}
+
+.header .search-input {
+  @apply py-2 px-4 rounded-l focus:outline-none;
+}
+
+.header .search-submit {
+  @apply bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-r transition-colors duration-200;
+}
+.high-contrast-mode .header{
+  color:black;
+  background-color:white;
+}
